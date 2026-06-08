@@ -6,6 +6,10 @@ the time interval [0, T] is split into n steps, each of size sqrt(dt).
 The sqrt(dt) scaling keeps the variance finite as n grows, so the
 path stays bounded while becoming continuous. Variance grows
 linearly with time (Var = T), so larger T spreads the path wider.
+
+Because each position is a cumulative sum of many independent steps,
+the CLT guarantees it is normally distributed - this is why Brownian
+motion has Gaussian increments.
 '''
 import numpy as np
 import matplotlib.pyplot as plt
