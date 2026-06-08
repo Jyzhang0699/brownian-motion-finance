@@ -8,7 +8,7 @@ path stays bounded while becoming continuous. Variance grows
 linearly with time (Var = T), so larger T spreads the path wider.
 
 Because each position is a cumulative sum of many independent steps,
-the CLT guarantees it is normally distributed - this is why Brownian
+the CLT guarantees it is normally distributed. This is why Brownian
 motion has Gaussian increments.
 '''
 import numpy as np
