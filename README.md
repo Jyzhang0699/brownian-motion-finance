@@ -59,6 +59,8 @@ We test these on two stocks from 2020 to 2026: AAPL (a stable large-cap) and GME
 
 AAPL grows steadily with moderate swings, while GME shows an extreme spike in early 2021 followed by high volatility. 
 
+GME's spike in particular has a story behind it. In January 2021, GameStop was a struggling game retailer that many hedge funds were shorting. Retail traders on Reddit's WallStreetBets started buying the stock together. As the price rose, short sellers had to buy back shares to cut their losses, which pushed the price even higher. The stock went from under $20 to $483 in a few weeks, then crashed. This is why GME is a good test case: its price was driven by crowd behaviour, not fundamentals.
+
 ### Property 1: Are returns normally distributed?
 
 We compute daily log returns for each stock, plot their distribution, and overlay a normal curve fitted with the stock's own mean and standard deviation. Fitting the curve to each stock's own spread lets us compare the *shape* of the distribution, not its width.
@@ -113,6 +115,7 @@ Brownian motion predicts that the variance of an n-day return is n times the var
 
 For AAPL, the points fall almost perfectly on a straight line through the origin: variance grows linearly, exactly as Brownian motion predicts.
 
+For GME, the points fall increasingly below the line. The main reason is that GME's huge moves in 2021 tend to reverse: large positive and negative returns partially cancel out within longer windows, so the longer the window, the less the 2021 spike matters. The reference line, however, is scaled from the single-day variance, which the spike inflated. So the line keeps growing at full speed while the actual variance falls behind.
 
 AAPL satisfies Property 3 cleanly; GME clearly deviates.
 
